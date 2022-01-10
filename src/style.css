@@ -1,3 +1,110 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: #180c34;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+header {
+  padding: 1rem 1rem 0.5rem 0;
+  display: flex;
+  justify-content: flex-start;
+  height: 3em;
+  background-color: #dbc7ea;
+}
+
+.link {
+  flex: 1;
+  margin-right: 2%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.line:hover {
+  text-decoration: underline;
+  color: #f08aa7;
+}
+
+.logo {
+  margin-left: 3%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 2% 2% 2% 2%;
+}
+
+.movie-block {
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  gap: 2%;
+  margin-top: 5%;
+}
+
+.cards {
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5% 1.5% 1.5% 1.5%;
+  background-color: #c39fcc;
+}
+
+.cards img {
+  display: block;
+  height: 22rem;
+  width: 100%;
+}
+
+.title {
+  color: blue;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0 0.5rem;
+  letter-spacing: 0.5px;
+  height: 7rem;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+}
+
+.comment-btn {
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+  padding: 2% 2% 2% 2%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  border: 2px solid #000;
+}
+
+.reservation-btn {
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  padding: 2% 2% 2% 2%;
+  border-radius: 5px;
+  border: 2px solid #000;
 }
