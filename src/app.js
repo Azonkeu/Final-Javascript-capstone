@@ -1,2 +1,2 @@
-const index = (a, b) =>  a + b;
+const index = (a, b) => a + b;
 export default index;
