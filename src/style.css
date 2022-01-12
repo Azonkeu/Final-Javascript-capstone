@@ -73,13 +73,22 @@ header {
   width: 100%;
 }
 
+.title-div {
+  display: flex;
+  flex-direction: row;
+  color: blue;
+  margin-top: 1%;
+}
+
 .title {
+  flex: 3;
   color: blue;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0 0.5rem;
   letter-spacing: 0.5px;
   height: 7rem;
+  min-width: 70%;
 }
 
 .btn {
@@ -107,4 +116,145 @@ header {
   padding: 2% 2% 2% 2%;
   border-radius: 5px;
   border: 2px solid #000;
+}
+
+.popup-block {
+  display: flex;
+  width: 100%;
+  background-color: rgba(14, 3, 3, 0.1);
+}
+
+.pop-div {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5%;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  top: 0;
+  background-color: #fff;
+  padding: 1rem;
+  max-height: 100%;
+  scroll-behavior: auto;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.pop-img {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2% 2% 2% 2%;
+  background-color: rosybrown;
+}
+
+.img-pop {
+  max-height: 30rem;
+  width: 80%;
+  margin: 1% auto 0 auto;
+}
+
+.close {
+  width: 10%;
+  padding: 1% 2% 1% 2%;
+  background-color: rosybrown;
+  border: none;
+  align-self: flex-end;
+}
+
+.title-pop-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-pop {
+  flex: 1;
+  margin: 1% auto 0 auto;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4%;
+  width: 80%;
+}
+
+.datail-one {
+  flex: 1;
+  flex-direction: column;
+  min-width: 60%;
+  font-size: 1.1em;
+  color: #000;
+  font-weight: 600;
+  margin: 1% 0 0 4%;
+}
+
+.datail-two {
+  flex: 1;
+  flex-direction: column;
+  min-width: 40%;
+  font-size: 1.1em;
+  color: #000;
+  font-weight: 600;
+  margin: 1% 0 0 14%;
+}
+
+.overview {
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  margin-top: 3%;
+  color: #000;
+  font-weight: 500;
+}
+
+.title-add {
+  text-align: center;
+  margin: 3% 0 2% 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 2%;
+  max-width: 90%;
+  align-self: center;
+}
+
+textarea {
+  margin-top: 3%;
+  max-width: 90%;
+  align-self: center;
+  padding: 1% 0 0 2%;
+}
+
+.submit {
+  margin-top: 3%;
+  padding: 2%;
+  max-width: 40%;
+  align-self: center;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: #180c34;
+  color: #fff;
+}
+
+.user-comment {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  line-height: 26px;
 }
