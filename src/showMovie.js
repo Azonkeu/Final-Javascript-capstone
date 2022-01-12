@@ -17,7 +17,7 @@ const showMovies = (movieData) => {
     </div>
     <div class="btn">
         <button class="comment-btn" type="button">Comments</button>
-        <a class="reservation-btn" type="button">Reservations</a>
+        <button class="reservation-btn" type="button">Reservations</button>
     </div>
 </div>`;
   });

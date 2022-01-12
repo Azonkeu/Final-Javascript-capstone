@@ -1,8 +1,11 @@
+/* eslint-disable */
 import showMovies from './showMovie.js';
 import popup from './popup.js';
 import displayCommentinfo from './display.js';
-import receiveComment from './receive.js';
-import counter from './counter.js';
+import displayReservationinfo from './R_display';
+import {receiveComment, receiveReservation} from './receive.js';
+import {counter, ResCounter} from './counter.js';
+import Res_popup from './R_popup.js';
 import './style.css';
 
 const newData = async () => {
@@ -18,6 +21,7 @@ function displayMov() {
   newData().then((movies) => {
     movies.forEach((movie, index) => {
       const containing = document.querySelectorAll('.comment-btn')[index];
+      
       containing.addEventListener('click', (event) => {
         if (event.target.matches('button')) {
           popup(movie);
@@ -28,6 +32,24 @@ function displayMov() {
   });
 }
 
+function displayReservation() {
+  newData().then((movies) => {
+    movies.forEach((movie, index) => {
+      const Select_R_btn = document.querySelectorAll('.reservation-btn')[index];
+      
+      Select_R_btn.addEventListener('click', (event) => {
+        if (event.target.matches('button')) {
+          Res_popup(movie);
+          displayReservationinfo(movie, receiveReservation, ResCounter);
+        }
+      });
+    });
+  });
+}
+
+
+
+
 const getData = async () => {
   const apiKey = 'api_key=574dd9cb25756d0a612a187ad048b948';
   const apiUrl = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&${apiKey}`;
@@ -36,6 +58,7 @@ const getData = async () => {
   const res = await data.results;
   showMovies(res);
   displayMov(res);
+  displayReservation(res);
 };
 
 getData();
