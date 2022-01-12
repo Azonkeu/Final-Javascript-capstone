@@ -11,6 +11,7 @@ const displayReservationinfo = (movie, receiveReservation, counter) => {
   Reservation.addEventListener('click', (event) => {
     if (event.target.matches('button')) {
       event.preventDefault();
+      /* eslint-disable */
       const username = document.querySelector('.input-name').value;
       const date_start = document.querySelector('.start-date').value;
       const date_end = document.querySelector('.end-date').value;
