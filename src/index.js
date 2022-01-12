@@ -6,7 +6,12 @@ import displayReservationinfo from './R_display';
 import {receiveComment, receiveReservation} from './receive.js';
 import {counter, ResCounter} from './counter.js';
 import Res_popup from './R_popup.js';
+import countermov from './movieCount.js';
 import './style.css';
+
+const movieList = document.querySelector('.movie-block');
+const showCounter = document.querySelector('.movie-count');
+
 
 const newData = async () => {
   const key = 'api_key=574dd9cb25756d0a612a187ad048b948';
@@ -32,6 +37,60 @@ function displayMov() {
   });
 }
 
+async function postData(url = '', data = {}) {
+  const response = await fetch(url, {
+    method: 'POST',
+    mode: 'cors', 
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    redirect: 'follow', 
+    referrerPolicy: 'no-referrer', 
+    body: JSON.stringify(data)
+  });
+  return response.json();
+}
+
+async function getText(file) {
+  let myObject = await fetch(file);
+  let myText = await myObject.json();
+  likes(myText);
+}
+const likes = ((alfa) => {
+  newData ().then((movies) => {
+    movies.forEach((movi, index) => {
+  const spans = document.querySelectorAll('.like-count')[index];
+  console.log(alfa);
+      alfa.forEach(lik => {
+        if(lik.item_id == movi.id) {
+          spans.innerHTML = `${lik.likes} likes`;
+      };
+    })
+    });
+});
+});
+
+getText(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fVSALNrpnLiYk8wyVjPw/likes`);
+
+newData ().then((movies) => {
+  movies.forEach((movi, index) => {
+    const spans = document.querySelectorAll('.cards')[index];
+    spans.addEventListener('click', (e) => { 
+     if (e.target.tagName.toLowerCase() === 'i'){
+       console.log(movi.id);
+      const itemId = movi.id; 
+      console.log(itemId);
+      postData('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fVSALNrpnLiYk8wyVjPw/likes', { "item_id": itemId });
+      getText(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fVSALNrpnLiYk8wyVjPw/likes`);
+
+    }
+  })
+ });
+});
+
+
 function displayReservation() {
   newData().then((movies) => {
     movies.forEach((movie, index) => {
@@ -47,9 +106,6 @@ function displayReservation() {
   });
 }
 
-
-
-
 const getData = async () => {
   const apiKey = 'api_key=574dd9cb25756d0a612a187ad048b948';
   const apiUrl = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&${apiKey}`;
@@ -59,6 +115,9 @@ const getData = async () => {
   showMovies(res);
   displayMov(res);
   displayReservation(res);
+  newData().then((movies) => {
+    countermov(movies, showCounter);
+    })  
 };
 
 getData();

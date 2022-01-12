@@ -4,7 +4,7 @@
   "description": "This is our JavaScript Capstone project.",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --env=jsdom",
     "watch": "webpack --watch",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
