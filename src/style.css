@@ -176,6 +176,11 @@ header {
   overflow-y: scroll;
 }
 
+.like-icon {
+  display: flex;
+  flex-direction: column;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -283,6 +288,11 @@ textarea {
 }
 
 .user-comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-reservation {
   display: flex;
   flex-direction: column;
 }

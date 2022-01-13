@@ -1,4 +1,4 @@
-const displayReservationinfo = (movie, receiveReservation, counter) => {
+const displayReservationinfo = (movie, receiveReservation, resCounter) => {
   const displayReservation = (el) => {
     const ul = document.querySelector('.user-reservation');
     el.forEach((item) => {
@@ -7,6 +7,14 @@ const displayReservationinfo = (movie, receiveReservation, counter) => {
       ul.appendChild(li);
     });
   };
+
+  const reservationdisp = (el) => {
+    const ul = document.querySelector('.user-reservation');
+    const li = document.createElement('li');
+    li.textContent = `${el.date_start} - ${el.date_end} by ${el.username}`;
+    ul.appendChild(li);
+  };
+
   const Reservation = document.querySelector('.r-popup');
   Reservation.addEventListener('click', (event) => {
     if (event.target.matches('button')) {
@@ -34,23 +42,17 @@ const displayReservationinfo = (movie, receiveReservation, counter) => {
       })
         .then((response) => {
           document.querySelector('.input-name').value = '';
-          receiveReservation(itemId)
-            .then((data) => {
-              if (data.error) {
-                throw new Error(data.error);
-              }
-              displayReservation(data);
-              const commentCounter = document.querySelector('.reservation-counter');
-              commentCounter.innerHTML = `(${counter()})`;
-              window.location.reload();
-            });
+          response.json();
+          reservationdisp(el);
+          const reservationCounter = document.querySelector('.reservation-counter');
+          reservationCounter.innerHTML = `(${resCounter()})`;
           return response.json();
         })
         .then(() => {
           displayReservation(el);
           document.querySelector('.input-name').value = '';
-          const commentCounter = document.querySelector('.reservation-counter');
-          commentCounter.innerHTML = `(${counter()})`;
+          const reservationCounter = document.querySelector('.reservation-counter');
+          reservationCounter.innerHTML = `(${resCounter()})`;
         });
     }
   });
@@ -60,8 +62,8 @@ const displayReservationinfo = (movie, receiveReservation, counter) => {
         throw new Error(data.error);
       }
       displayReservation(data);
-      const commentCounter = document.querySelector('.reservation-counter');
-      commentCounter.innerHTML = `(${data.length})`;
+      const reservationCounter = document.querySelector('.reservation-counter');
+      reservationCounter.innerHTML = `(${data.length})`;
     });
   const close = document.querySelector('.close');
   close.addEventListener('click', () => {
