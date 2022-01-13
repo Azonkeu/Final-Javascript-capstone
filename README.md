@@ -35,9 +35,16 @@ The JavaScript capstone project is about building your own web application based
    - Create an index.html file and write your HTML markup here. The index.html file must be set as a template using the HTML Webpack Plugin.
 
 
-
 ## Demo
-Check out the [live version of the website](https://azonkeu.github.io/Final-Javascript-capstone/) for more details.
+Check out the [live version of the website](https://elated-saha-e87646.netlify.app/) for more details.
+
+## Screenshots
+![alt text](https://ibb.co/xHdZ1Hc)
+![image](https://www.linkpicture.com/q/Screenshot-2022-01-13-231745.png)
+
+![image](https://www.linkpicture.com/q/Screenshot-2022-01-13-231902.png)
+
+![image](https://www.linkpicture.com/q/Screenshot-2022-01-13-232006.png)
 
 ## Built With
 Major languages: Html5, Css3, JavaScript
