@@ -39,7 +39,7 @@ The JavaScript capstone project is about building your own web application based
 Check out the [live version of the website](https://elated-saha-e87646.netlify.app/) for more details.
 
 ## Screenshots
-![alt text](https://ibb.co/xHdZ1Hc)
+
 ![image](https://www.linkpicture.com/q/Screenshot-2022-01-13-231745.png)
 
 ![image](https://www.linkpicture.com/q/Screenshot-2022-01-13-231902.png)
