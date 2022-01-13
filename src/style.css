@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
 *,
 *::after,
 *::before {
@@ -7,7 +9,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Ubuntu", sans-serif;
   margin: 0;
   background-color: #180c34;
 }
@@ -30,11 +32,16 @@ header {
 }
 
 .link {
-  flex: 1;
   margin-right: 2%;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1em;
+}
+
+.movie-logo {
+  margin-left: 2%;
   font-size: 1.2em;
+  color: #18208d;
 }
 
 .line:hover {
@@ -63,13 +70,13 @@ header {
   width: 100%;
   border-radius: 3px;
   box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
-  padding: 1.5% 1.5% 1.5% 1.5%;
+  padding: 2% 2% 2% 2%;
   background-color: #c39fcc;
 }
 
 .cards img {
   display: block;
-  height: 22rem;
+  height: 23rem;
   width: 100%;
 }
 
@@ -101,11 +108,16 @@ header {
   flex: 1;
   margin-left: auto;
   margin-right: auto;
-  max-width: 60%;
-  padding: 2% 2% 2% 2%;
+  max-width: 80%;
+  padding: 2% 27% 2% 27%;
   margin-bottom: 2%;
   border-radius: 5px;
-  border: 2px solid #000;
+  border: 2px solid #5959c7;
+  background-color: #5959c7;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
 }
 
 .reservation-btn {
@@ -113,9 +125,23 @@ header {
   margin-left: auto;
   margin-right: auto;
   max-width: 80%;
-  padding: 2% 2% 2% 2%;
+  padding: 2% 25% 2% 25%;
   border-radius: 5px;
-  border: 2px solid #000;
+  border: 2px solid #dbdf14;
+  background-color: #dbdf14;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.fas {
+  color: #56109b;
+  padding-top: 0.45rem;
+}
+
+.fas:hover {
+  color: #180c34;
 }
 
 .popup-block {
@@ -263,4 +289,18 @@ textarea {
 
 p {
   line-height: 26px;
+}
+
+footer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #dbc7ea;
+  padding: 3% 1% 2% 1%;
+  justify-content: center;
+  text-align: center;
+  top: 230em;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
 }
