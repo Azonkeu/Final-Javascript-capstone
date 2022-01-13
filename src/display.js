@@ -8,6 +8,14 @@ const displayCommentinfo = (movie, receiveComment, counter) => {
       ul.appendChild(li);
     });
   };
+
+  const commentsdis = (el) => {
+    const ul = document.querySelector('.user-comment');
+    const li = document.createElement('li');
+    const date = `${el.creation_date}`;
+    li.textContent = `${date}  ${el.username} : ${el.comment}`;
+    ul.appendChild(li);
+  };
   const comments = document.querySelector('.popu');
   comments.addEventListener('click', (event) => {
     if (event.target.matches('button')) {
@@ -17,7 +25,7 @@ const displayCommentinfo = (movie, receiveComment, counter) => {
       const itemId = movie.id;
       const d = new Date();
       // eslint-disable-next-line camelcase
-      const creation_date = `${d.getDate()}-${d.getMonth() + 1}-${d.getFullYear()}`;
+      const creation_date = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
       const el = { creation_date, username, comment };
 
       fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fVSALNrpnLiYk8wyVjPw/comments', {
@@ -34,16 +42,10 @@ const displayCommentinfo = (movie, receiveComment, counter) => {
         .then((response) => {
           document.querySelector('.input').value = '';
           document.querySelector('.texarea').value = '';
-          receiveComment(itemId)
-            .then((data) => {
-              if (data.error) {
-                throw new Error(data.error);
-              }
-              displayComments(data);
-              const commentCounter = document.querySelector('.comment-counter');
-              commentCounter.innerHTML = `(${counter()})`;
-              window.location.reload();
-            });
+          response.json();
+          commentsdis(el);
+          const commentCounter = document.querySelector('.comment-counter');
+          commentCounter.innerHTML = `(${counter()})`;
           return response.json();
         })
         .then(() => {
