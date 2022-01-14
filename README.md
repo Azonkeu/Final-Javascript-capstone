@@ -1,15 +1,18 @@
 # Javascript-capstone
 
-The JavaScript capstone project is about building your own web application based on an external API. We selected an API that provides movies. The webapp has 3 user interfaces:
+Our JavaScript capstone project is about building a website that shows the most popular movies from an API with the ability to comment and make reservations on each movie. The webapp has 3 user interfaces:
+
 
 - A home page showing a list of movies that you can "like."
-- A popup window with more data about a movie that you can use to comment on it or reserve it for a period of time.
+- A popup window with more data about a movie that you can use to comment on it
+- A popup window with more data about a movie that you can use to reserve it for a period of time.
 
 ### General requirements
 
 - Set up the repository on GitHub and use [Gitflow](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/git-github/articles/gitflow.md).
 - Set up [webpack](https://webpack.js.org/guides/getting-started/#basic-setup).
 - Set up a JavaScript testing library ([Jest](https://jestjs.io/docs/getting-started)).
+- We selected a movie api 
 
 ## Demo
 Check out the [live version of the website](https://elated-saha-e87646.netlify.app/) for more details.
