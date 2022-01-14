@@ -1,9 +1,8 @@
-/* eslint-disable */
 import showMovies from './showMovie.js';
 import popup from './popup.js';
 import displayCommentinfo from './display.js';
-import displayReservationinfo from './R_display';
-import {receiveComment, receiveReservation} from './receive.js';
+import displayReservationinfo from './R_display.js';
+import { receiveComment, receiveReservation } from './receive.js';
 import counter from './counter.js';
 import resCounter from './reservecounter.js';
 import Res_popup from './R_popup.js';
@@ -61,7 +60,7 @@ const getData = async () => {
   displayReservation(res);
   newData().then((movies) => {
     countermov(movies, showCounter);
-    })  
+    });
 };
 
 getData();
@@ -73,19 +72,19 @@ async function postData(url = '', data = {}) {
     cache: 'no-cache',
     credentials: 'same-origin',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     redirect: 'follow', 
     referrerPolicy: 'no-referrer', 
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   });
    response.json(); 
    window.location.reload();
 }
 
 async function getText(file) {
-  let myObject =  await fetch(file);
-  let myText = await myObject.json();
+  const myObject = await fetch(file);
+  const myText = await myObject.json();
   likes(myText);
   return myText;
 }
@@ -94,32 +93,26 @@ const likes = ((alfa) => {
   newData ().then((movies) => {
     movies.forEach((movi, index) => {
   const spans = document.querySelectorAll('.like-count')[index];
-  console.log(alfa);
       alfa.forEach(lik => {
-        if(lik.item_id == movi.id) {
+        if (lik.item_id === movi.id) {
           spans.innerHTML = `${lik.likes} likes`;
-    
-      };
-    })
+      }
     });
-   
+    });
 });
 });
     
 getText(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fVSALNrpnLiYk8wyVjPw/likes`);
 
- 
   newData ().then((movies) => {
     movies.forEach((movi, index) => {
       const spans = document.querySelectorAll('.cards')[index];
       spans.addEventListener('click', (e) => { 
   if (e.target.tagName.toLowerCase() === 'i'){
-    console.log(movi.id);
-    const itemId = movi.id; 
-    console.log(itemId);
-    postData('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fVSALNrpnLiYk8wyVjPw/likes', { "item_id": itemId });
-    getText(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fVSALNrpnLiYk8wyVjPw/likes`);
-  }
-})
-});
+        const itemId = movi.id; 
+        postData('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fVSALNrpnLiYk8wyVjPw/likes', { "item_id": itemId });
+        getText(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fVSALNrpnLiYk8wyVjPw/likes`);
+      }
+    });
+  });
 });

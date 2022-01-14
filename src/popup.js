@@ -1,7 +1,6 @@
 const popup = (el) => {
-  /* eslint-disable */
   const popdiv = document.querySelector('.popu');
-  popdiv.innerHTML =  `<di class="pop-div">
+  popdiv.innerHTML = `<di class="pop-div">
   <div class="pop-img">
       <button type="button" class="close"><i class="fas fa-times fa-2x"></i></button>
       <img src="https://image.tmdb.org/t/p/w500${el.poster_path}" alt="movies" class="img-pop">

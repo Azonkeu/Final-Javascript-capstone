@@ -1,39 +1,18 @@
 # Javascript-capstone
 
-The JavaScript capstone project is about building your own web application based on an external API. You will select an API that provides data about a topic that you like and then build the webapp around it. The webapp will have 2 or 3 user interfaces (depending on the size of your team):
+Our JavaScript capstone project is about building a website that shows the most popular movies from an API with the ability to comment and make reservations on each movie. The webapp has 3 user interfaces:
 
-- A home page showing a list of items that you can "like."
-- A popup window with more data about an item that you can use to comment on it or reserve it for a period of time.
+
+- A home page showing a list of movies that you can "like."
+- A popup window with more data about a movie that you can use to comment on it
+- A popup window with more data about a movie that you can use to reserve it for a period of time.
 
 ### General requirements
 
-- Make sure that there are [no linter errors](https://github.com/microverseinc/linters-config).
-
-- Make sure that you used correct [Gitflow](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/git-github/articles/gitflow.md).
-
-- Make sure that you documented your work [in a professional way](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/articles/professional_repo_rules.md).
-  
-- Follow our list of [best practices for HTML & CSS](https://github.com/microverseinc/curriculum-html-css/blob/main/articles/html_css_best_practices.md).
-  
-- Follow our list of [best practices for JavaScript](https://github.com/microverseinc/curriculum-html-css/blob/main/articles/javascript_best_practices.md).
-
-**Set up a new project with webpack following the following steps:**
-
-   - First set up a new GitHub repository for this capstone.
-
-   - Follow the instructions from the [getting started](https://webpack.js.org/guides/getting-started/#basic-setup) guide to set up the basics. Implement all the steps from Basic Setup to NPM Scripts.
-
-   - The next step in building your webpack boilerplate is to add some style to it.
-
-   - Follow the instructions from the setting [up HtmlWebpackPlugin guide](https://webpack.js.org/guides/output-management/#setting-up-htmlwebpackplugin). Be extra careful when updating the module.exports object in your webpack.config.js file, to not to make any nesting mistakes.
-
-   - Follow the steps in loading CSS guide.
-
-   **Setup local dev server** 
-   - Follow the using [webpack-dev-server guide](https://webpack.js.org/guides/development/#using-webpack-dev-server) and set it up on your local machine. Again, be cautious with updating the module.exports object in your webpack.config.js.
-
-   - Create an index.html file and write your HTML markup here. The index.html file must be set as a template using the HTML Webpack Plugin.
-
+- Set up the repository on GitHub and use [Gitflow](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/git-github/articles/gitflow.md).
+- Set up [webpack](https://webpack.js.org/guides/getting-started/#basic-setup).
+- Set up a JavaScript testing library ([Jest](https://jestjs.io/docs/getting-started)).
+- We selected a movie api 
 
 ## Demo
 Check out the [live version of the website](https://elated-saha-e87646.netlify.app/) for more details.

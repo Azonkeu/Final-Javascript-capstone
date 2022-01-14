@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable camelcase */
 import resCounter from './reservecounter.js';
 
 jest.mock('./R_display.js');
