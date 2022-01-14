@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "Ubuntu", sans-serif;
+  margin: 0;
+  background-color: #180c34;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+header {
+  padding: 1rem 1rem 0.5rem 0;
+  display: flex;
+  justify-content: flex-start;
+  height: 3em;
+  background-color: #dbc7ea;
+}
+
+.link {
+  margin-right: 2%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.movie-logo {
+  margin-left: 2%;
+  font-size: 1.2em;
+  color: #18208d;
+}
+
+.line:hover {
+  text-decoration: underline;
+  color: #f08aa7;
+}
+
+.logo {
+  margin-left: 3%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 2% 2% 2% 2%;
+}
+
+.movie-block {
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  gap: 2%;
+  margin-top: 5%;
+}
+
+.cards {
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+  padding: 2% 2% 2% 2%;
+  background-color: #c39fcc;
+}
+
+.cards img {
+  display: block;
+  height: 23rem;
+  width: 100%;
+}
+
+.title-div {
+  display: flex;
+  flex-direction: row;
+  color: blue;
+  margin-top: 1%;
+}
+
+.title {
+  flex: 3;
+  color: blue;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0 0.5rem;
+  letter-spacing: 0.5px;
+  height: 7rem;
+  min-width: 70%;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+}
+
+.comment-btn {
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  padding: 2% 27% 2% 27%;
+  margin-bottom: 2%;
+  border-radius: 5px;
+  border: 2px solid #5959c7;
+  background-color: #5959c7;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.reservation-btn {
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  padding: 2% 25% 2% 25%;
+  border-radius: 5px;
+  border: 2px solid #dbdf14;
+  background-color: #dbdf14;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.fas {
+  color: #56109b;
+  padding-top: 0.45rem;
+}
+
+.fas:hover {
+  color: #180c34;
+}
+
+.popup-block {
+  display: flex;
+  width: 100%;
+  background-color: rgba(14, 3, 3, 0.1);
+}
+
+.r-popup {
+  display: flex;
+  width: 100%;
+  background-color: rgba(14, 3, 3, 0.1);
+}
+
+.pop-div {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5%;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  top: 0;
+  background-color: #fff;
+  padding: 1rem;
+  max-height: 100%;
+  scroll-behavior: auto;
+  overflow-y: scroll;
+}
+
+.like-icon {
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.pop-img {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2% 2% 2% 2%;
+  background-color: rosybrown;
+}
+
+.img-pop {
+  max-height: 30rem;
+  width: 80%;
+  margin: 1% auto 0 auto;
+}
+
+.close {
+  width: 10%;
+  padding: 1% 2% 1% 2%;
+  background-color: rosybrown;
+  border: none;
+  align-self: flex-end;
+}
+
+.title-pop-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-pop {
+  flex: 1;
+  margin: 1% auto 0 auto;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4%;
+  width: 80%;
+}
+
+.datail-one {
+  flex: 1;
+  flex-direction: column;
+  min-width: 60%;
+  font-size: 1.1em;
+  color: #000;
+  font-weight: 600;
+  margin: 1% 0 0 4%;
+}
+
+.datail-two {
+  flex: 1;
+  flex-direction: column;
+  min-width: 40%;
+  font-size: 1.1em;
+  color: #000;
+  font-weight: 600;
+  margin: 1% 0 0 14%;
+}
+
+.overview {
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  margin-top: 3%;
+  color: #000;
+  font-weight: 500;
+}
+
+.title-add {
+  text-align: center;
+  margin: 3% 0 2% 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 2%;
+  max-width: 90%;
+  align-self: center;
+}
+
+textarea {
+  margin-top: 3%;
+  max-width: 90%;
+  align-self: center;
+  padding: 1% 0 0 2%;
+}
+
+.submit {
+  margin-top: 3%;
+  padding: 2%;
+  max-width: 40%;
+  align-self: center;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: #180c34;
+  color: #fff;
+}
+
+.user-comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-reservation {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  line-height: 26px;
+}
+
+footer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #dbc7ea;
+  padding: 3% 1% 2% 1%;
+  justify-content: center;
+  text-align: center;
+  top: 230em;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+}
