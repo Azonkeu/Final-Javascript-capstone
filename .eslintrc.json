@@ -25,6 +25,7 @@
       "space-before-blocks": "off",
       "padded-blocks": "off",
       "arrow-parens": "off",
+      "import/no-extraneous-dependencies": "off",
       "import/extensions": [ 1, {
         "js": "always", "json": "always"
       }]
