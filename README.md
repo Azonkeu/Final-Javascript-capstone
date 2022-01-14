@@ -18,7 +18,7 @@ Our JavaScript capstone project is about building a website that shows the most 
 
 ## Getting Started
 
-After creating the repository on Github, we followed this steps:
+After creating the repository on Github, we followed these steps:
 - Cloned the repository on the local machine
 - Created a **develop** branch and pushed it to Github
 - Changed the default branch on Github (changed it from **main** to **develop**)
