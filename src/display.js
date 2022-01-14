@@ -24,7 +24,6 @@ const displayCommentinfo = (movie, receiveComment, counter) => {
       const comment = document.querySelector('.texarea').value;
       const itemId = movie.id;
       const d = new Date();
-      // eslint-disable-next-line camelcase
       const creation_date = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
       const el = { creation_date, username, comment };
 
@@ -46,7 +45,6 @@ const displayCommentinfo = (movie, receiveComment, counter) => {
           commentsdis(el);
           const commentCounter = document.querySelector('.comment-counter');
           commentCounter.innerHTML = `(${counter()})`;
-          return response.json();
         })
         .then(() => {
           displayComments(el);

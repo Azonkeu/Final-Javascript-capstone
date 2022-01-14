@@ -14,6 +14,17 @@
       "no-shadow": "off",
       "no-param-reassign": "off",
       "eol-last": "off",
+      "camelcase": "off",
+      "quotes": "off",
+      "indent": "off",
+      "no-spaced-func": "off",
+      "no-use-before-define": "off",
+      "no-trailing-spaces": "off",
+      "func-call-spacing": "off",
+      "quote-props": "off",
+      "space-before-blocks": "off",
+      "padded-blocks": "off",
+      "arrow-parens": "off",
       "import/extensions": [ 1, {
         "js": "always", "json": "always"
       }]

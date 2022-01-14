@@ -1,6 +1,5 @@
 const showMovies = (movieData) => {
   movieData.forEach((el) => {
-    /* eslint-disable */
     const { title, poster_path } = el;
     const movieDiv = document.querySelector('.movie-block');
     movieDiv.innerHTML

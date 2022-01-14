@@ -11,7 +11,7 @@ const displayReservationinfo = (movie, receiveReservation, resCounter) => {
   const reservationdisp = (el) => {
     const ul = document.querySelector('.user-reservation');
     const li = document.createElement('li');
-    li.textContent = `${el.date_start} - ${el.date_end} by ${el.username}`;
+    li.textContent = `${el.date_start} - ${el.date_start} by ${el.username}`;
     ul.appendChild(li);
   };
 
@@ -19,13 +19,10 @@ const displayReservationinfo = (movie, receiveReservation, resCounter) => {
   Reservation.addEventListener('click', (event) => {
     if (event.target.matches('button')) {
       event.preventDefault();
-      /* eslint-disable */
       const username = document.querySelector('.input-name').value;
       const date_start = document.querySelector('.start-date').value;
       const date_end = document.querySelector('.end-date').value;
       const itemId = movie.id;
-
-      // eslint-disable-next-line camelcase
       const el = { username, date_start, date_end };
 
       fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fVSALNrpnLiYk8wyVjPw/reservations', {

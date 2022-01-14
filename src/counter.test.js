@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable camelcase */
 import counter from './counter.js';
 
 jest.mock('./display.js');
